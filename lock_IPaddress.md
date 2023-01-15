@@ -1,4 +1,4 @@
-# Lock IP Addres on CentOsStream
+# Lock IP Addres on CentOsStream and Alma Linux
 
 create a  /etc/sysconfig/network-scripts/ifcfg-eth0 file
 
@@ -14,3 +14,5 @@ then restart service:
 ```
 sudo systemctl restart NetworkManager.service
 ```
+
+

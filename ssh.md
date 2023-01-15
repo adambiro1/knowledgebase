@@ -26,12 +26,12 @@ ssh server1
 ```
 vi ~/.ssh/authorized_keys
 ```
-To disable SSH password authentication, SSH in to your server as root to edit this file 
+To disable SSH password authentication, SSH in to your server to edit this file as root
 
 ```
  sudo vi /etc/ssh/sshd_config
 ```
-into authentication section write: **PasswordAuthetication no**
+into authentication section write: **PasswordAuthentication no**
 
 run this command to reload config file
 
