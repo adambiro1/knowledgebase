@@ -1,7 +1,11 @@
 # SSH connection to server
 
 ## Set up
+get IP address from server
 
+```
+hostname -I
+```
 create config file in .ssh directory on your machine
 
 ```
