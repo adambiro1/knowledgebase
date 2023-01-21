@@ -30,3 +30,5 @@ Keys files with your setting is:
 
 *System\ eth0.nmconnection*
 
+Different proces in Hyper-V, you have to create virtual switch
+
