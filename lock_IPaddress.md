@@ -1,5 +1,8 @@
 # Lock IP Addres on CentOsStream and Alma Linux
 
+
+not finished!!! lot of things I found are depricated
+
 create a  /etc/sysconfig/network-scripts/ifcfg-eth0 file
 
 enter there:
