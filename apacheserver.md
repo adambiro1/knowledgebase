@@ -1,6 +1,6 @@
 # Apache server
 
-## installation and enabling
+## installation and enabling CentOSStream
 
 install on CentOSStream:
 ```
@@ -14,3 +14,7 @@ allow communication to port 80:
 ```
 sudo firewall-cmd --add-port=80/tcp
 ```
+
+add content to the web page in: 
+
+*/var/www/html*
