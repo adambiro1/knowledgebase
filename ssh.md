@@ -31,7 +31,9 @@ To disable SSH password authentication, SSH in to your server to edit this file 
 ```
  sudo vi /etc/ssh/sshd_config
 ```
-into authentication section write: **PasswordAuthentication no**
+into authentication section write:
+
+ **PasswordAuthentication no**
 
 run this command to reload config file
 
@@ -48,3 +50,42 @@ links:
 [sshconfig file client](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
 
 ---
+
+## Managing sshd_config file
+
+Match (user,group,address) statement makes a specific rules for chossen subject/s
+always place Match statements at the and of a configfile(sshd_config):
+```
+Match user testuser1;
+PasswordAuthentication yes
+```
+Display Motd(message of the day)
+
+**PrintMotd yes**
+
+Print last log:
+
+**PrintLastLog yes**
+
+Time to authenticate:
+
+**LoginGraceTime 2m**
+
+Confgure RED (radom early drop) protocol
+
+**MAXStartups 10:30:100**
+
+Deny/allow users/groups from log via ssh ( deny even if the Match permits) it:
+
+**Denyusers testuser1**
+
+**AllowGroups wheel**
+
+
+
+
+---
+Check if sshd is running on server
+```
+ps ax | grep sshd
+```
