@@ -1,5 +1,19 @@
 # SSH connection to server
 
+
+generate ssh key:
+
+
+
+
+
+ssh-keygen -t ed25519 -f ${HOME}/.ssh/name it 
+
+
+
+
+
+
 ## Set up
 get IP address from server
 
