@@ -52,7 +52,7 @@ bzip2 archivename.tar
 ```
 uncompress an compressed file using bunzip2:
 ```
-bunzip archivename.tar.bz2
+bunzip2 archivename.tar.bz2
 ```
 ---
 

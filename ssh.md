@@ -33,8 +33,13 @@ Host server1
 ```
 ssh server1
 ```
+copy ssh public key to your machine:
+```
+ssh-copy-id <machine name>
+```
 
- Manually append your public key to the remote ssh server's key to authorized_keys file (when on windows powershell)
+ Manually append your public key to the remote ssh server's
+ key to authorized_keys file (when on windows powershell)
 
 *do this on server* 
 ```
