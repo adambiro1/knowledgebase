@@ -1,4 +1,4 @@
-# Lock IP Addres on CentOsStream and Alma Linux
+# Lock IP Addres on CentOsStream9
 
 
 not finished!!! lot of things I found are depricated
