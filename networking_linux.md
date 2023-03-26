@@ -1,7 +1,47 @@
-# Lock IP Addres on CentOsStream9
+# Newtworking on CentOSStream9
+
+## man pages to look
+```
+man networkmanager
+man networkmanager.conf
+man nmcli
+man nmcli-examples
+man nmsettings
+```
+
+## Usefull programs
+
+**ip** - show / manipulate routing, network devices, interfaces and tunnels
+
+**ss** - another utility to investigate sockets *replacement for netstat*
+
+**tcpdump** - dump traffic on a networ
+
+**nmap** - Network exploration tool and security / port scanner
+
+**socat** - Multipurpose relay "(SOcket CAT)"
+
+**ipset** — administration tool for IP sets
+
+**iptraf-ng** - Interactive Colorful IP LAN Monitor
+
+**mrtg** - The Multi Router Traffic Grapher (MRTG) is a tool to monitor the traffic load on network links.  MRTG generates HTML pages
+       containing PNG images which provide a LIVE visual representation of this traffic.
+
+**stunnel** - TLS offloading and load-balancing proxy
+
+**tshark** - Dump and analyze network traffic *terminal based wireshark, install as wireshark-cli*
+
+**iperf3** - perform network throughput tests
 
 
-not finished!!! lot of things I found are depricated
+## Tips
+
+when creating network manager confi file place it to: /etc/NetworkManager/conf.d
+
+
+
+## Older depricated method before CentOSsteam9/Rhel9...
 
 create a  /etc/sysconfig/network-scripts/ifcfg-eth0 file
 
@@ -29,9 +69,8 @@ use:
 This command migrates all profiles from ifcfg format to keyfile
 format and stores them in /etc/NetworkManager/system-connections/
 
-Keys files with your setting is:
+Keys files in CentOSStream9 with your setting is:
 
 *System\ eth0.nmconnection*
 
-Different proces in Hyper-V, you have to create virtual switch
 
