@@ -3,14 +3,9 @@
 
 generate ssh key:
 
-
-
-
-
+```
 ssh-keygen -t ed25519 -f ${HOME}/.ssh/name it 
-
-
-
+```
 
 
 
@@ -71,6 +66,8 @@ links:
 ---
 
 ## Managing sshd_config file
+
+`man sshd_config`
 
 Match (user,group,address) statement makes a specific rules for chossen subject/s
 always place Match statements at the and of a configfile(sshd_config):
