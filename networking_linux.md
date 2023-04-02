@@ -38,6 +38,17 @@ man nmsettings
 
 **ethtool** - query or control network driver and hardware settings
 
+**teamdctl** — team daemon control tool
+
+**traceroute** - print the route packets trace to network host
+
+**tracepath** - traces path to a network host discovering MTU along this path
+
+
+
+
+
+
 ## Tips
 
 when creating network manager confi file place it to: /etc/NetworkManager/conf.d
