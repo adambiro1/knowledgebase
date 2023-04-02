@@ -36,6 +36,7 @@ man nmsettings
 
 **ifstat** - handy utility to read network interface statistics
 
+**ethtool** - query or control network driver and hardware settings
 
 ## Tips
 
