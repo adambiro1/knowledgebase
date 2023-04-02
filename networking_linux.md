@@ -34,6 +34,8 @@ man nmsettings
 
 **iperf3** - perform network throughput tests
 
+**ifstat** - handy utility to read network interface statistics
+
 
 ## Tips
 
