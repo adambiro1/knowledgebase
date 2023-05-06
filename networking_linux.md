@@ -1,4 +1,4 @@
-# Newtworking on CentOSStream9
+# Networking
 
 ## man pages to look
 ```
