@@ -45,6 +45,7 @@ man nmsettings
 **tracepath** - traces path to a network host discovering MTU along this path
 
 **dig** - DNS lookup utility
+
 **whois** - client for the whois directory service
 
 
