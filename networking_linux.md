@@ -46,11 +46,20 @@ man nmsettings
 
 **dig** - DNS lookup utility
 
+**delv** - DNS lookup and validation utility
+
+
+
 **whois** - client for the whois directory service
 
 
+**nmstatectl** - A nmstate command line tool
 
+[nmstate](https://nmstate.io/)
 
+**NetworkManager** - network management daemon
+
+[networkmanager](https://networkmanager.dev/)
 
 ## Tips
 
