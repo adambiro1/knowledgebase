@@ -63,6 +63,8 @@ man nmsettings
 
 [networkmanager](https://networkmanager.dev/)
 
+[manual](https://developer-old.gnome.org/NetworkManager/stable/nmcli.html)
+
 **mtr** - a network diagnostic tool
 
 **mtr-packet** - send and receive network probes
@@ -79,7 +81,7 @@ firewall-cmd
 
 
 
-## Tips
+## Tips network manager
 
 show connection details with network manager:
 ```
@@ -99,7 +101,11 @@ change ip address method from dynamci to static:
 ```
 sudo nmcli connection modify enp1s0 ipv4.method manual ipv4.address <adress> ipv4.gateway <address> ipv4.dns <address>
 ```
+show wifi details
 
+```
+sudo nmcli device wifi show-password
+```
 
 when creating network manager confi file place it to: /etc/NetworkManager/conf.d
 
