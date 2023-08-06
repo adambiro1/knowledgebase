@@ -48,7 +48,7 @@ man nmsettings
 
 **delv** - DNS lookup and validation utility
 
-
+**host** - DNS lookup utility
 
 **whois** - client for the whois directory service
 
@@ -57,11 +57,49 @@ man nmsettings
 
 [nmstate](https://nmstate.io/)
 
+[github](https://github.com/nmstate/nmstate)
+
 **NetworkManager** - network management daemon
 
 [networkmanager](https://networkmanager.dev/)
 
+**mtr** - a network diagnostic tool
+
+**mtr-packet** - send and receive network probes
+
+[mtr page](https://www.bitwizard.nl/mtr/)
+
+## Firewalld
+
+administration via:
+```
+firewall-cmd 
+```
+[firewalld docs](https://firewalld.org/documentation/)
+
+
+
 ## Tips
+
+show connection details with network manager:
+```
+sudo nmcli connection show enp1s0
+```
+find ip4 address:
+```
+sudo nmcli connection show enp1s0 | grep -i ip4
+```
+find if the ip is dynamic or static:
+
+```
+sudo nmcli connection show enp1s0 | grep -i  method
+```
+change ip address method from dynamci to static:
+
+```
+sudo nmcli connection modify enp1s0 ipv4.method manual ipv4.address <adress> ipv4.gateway <address> ipv4.dns <address>
+```
+
 
 when creating network manager confi file place it to: /etc/NetworkManager/conf.d
 

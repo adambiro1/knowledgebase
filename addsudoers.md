@@ -14,3 +14,5 @@ check visudo if the: **%wheel  ALL=(ALL)  ALL** is uncomented
 ```
 usermod -aG sudo <username>
 ```
+
+logs for sudo are in: /var/log/secure
