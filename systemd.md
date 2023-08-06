@@ -1,8 +1,9 @@
 # systemd tips
 
-list all enabled services:
+list all running services:
 ```
-sudo systemectl list-units --type=service --state=running
+sudo systemctl list-units --type=service --state=running
 ```
+
 
 
