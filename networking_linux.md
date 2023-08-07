@@ -63,21 +63,6 @@ dig google.com mx
 
 **host** - DNS lookup utility
 
-**nslookup** -nslookup - query Internet name servers interactively
-
-check MX record with nslookup:
-```
-nslookup -debug -type=mx google.com
-#or
-nslookup -type=MX google.com
-#or
-nslookup -query=mx google.com
-
-```
-find all of the available DNS records of a domain:
-```
-nslookup -type=any <address>
-```
 
 **whois** - client for the whois directory service
 

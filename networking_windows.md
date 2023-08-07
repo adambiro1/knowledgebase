@@ -62,8 +62,21 @@ address resolution protocol (ARP)   arp -a (list mac addresses)
 
 **Route** - Manipulates network routing tables
 
-**Nslookup**:  DNS querry- nslookup google.com
+**nslookup**(windows utility) -nslookup - query Internet name servers interactively
 
+check MX record with nslookup:
+```
+nslookup -debug -type=mx google.com
+#or
+nslookup -type=MX google.com
+#or
+nslookup -query=mx google.com
+
+```
+find all of the available DNS records of a domain:
+```
+nslookup -type=any <address>
+```
 **Net**
 
 **Netuser**
