@@ -19,6 +19,8 @@ man nmsettings
 
 **nmap** - Network exploration tool and security / port scanner
 
+**nc** (netcat) — arbitrary TCP and UDP connections and listens
+
 **socat** - Multipurpose relay "(SOcket CAT)"
 
 **ipset** — administration tool for IP sets
@@ -27,6 +29,12 @@ man nmsettings
 
 **mrtg** - The Multi Router Traffic Grapher (MRTG) is a tool to monitor the traffic load on network links.  MRTG generates HTML pages
        containing PNG images which provide a LIVE visual representation of this traffic.
+
+**vnstat** - a console-based network traffic monitor
+
+[vnstat page](https://humdi.net/vnstat/)
+
+**bmon** - bandwidth monitor and rate estimator
 
 **stunnel** - TLS offloading and load-balancing proxy
 
