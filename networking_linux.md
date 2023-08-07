@@ -15,11 +15,37 @@ man nmsettings
 
 **ss** - another utility to investigate sockets *replacement for netstat*
 
-**tcpdump** - dump traffic on a networ
+**netstat**  -  Print  network connections, routing tables, interface statistics, masquerade connections, and multicast
+       memberships
 
-**nmap** - Network exploration tool and security / port scanner
+**ethtool** - query or control network driver and hardware settings
+
+**host** - DNS lookup utility (nslookup also on linux but it is Windows tool)
+
+```
+host google.com
+```
+
+specify type:
+
+```
+host -t ns google.com
+#or
+host -t mx gogle.com
+```
+
+
+**route** - show / manipulate the IP routing table (obsolete)
+
+**ip-route** - routing table management (instead of route)
+
+**tcpdump** - dump traffic on a network
 
 **nc** (netcat) — arbitrary TCP and UDP connections and listens
+
+**traceroute** - print the route packets trace to network host
+
+**nmap** - Network exploration tool and security / port scanner
 
 **socat** - Multipurpose relay "(SOcket CAT)"
 
@@ -44,11 +70,11 @@ man nmsettings
 
 **ifstat** - handy utility to read network interface statistics
 
-**ethtool** - query or control network driver and hardware settings
+
 
 **teamdctl** — team daemon control tool
 
-**traceroute** - print the route packets trace to network host
+
 
 **tracepath** - traces path to a network host discovering MTU along this path
 
@@ -60,8 +86,6 @@ dig google.com mx
 ```
 
 **delv** - DNS lookup and validation utility
-
-**host** - DNS lookup utility
 
 
 **whois** - client for the whois directory service
