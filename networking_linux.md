@@ -54,9 +54,30 @@ man nmsettings
 
 **dig** - DNS lookup utility
 
+use dig tocheck mx record:
+```
+dig google.com mx
+```
+
 **delv** - DNS lookup and validation utility
 
 **host** - DNS lookup utility
+
+**nslookup** -nslookup - query Internet name servers interactively
+
+check MX record with nslookup:
+```
+nslookup -debug -type=mx google.com
+#or
+nslookup -type=MX google.com
+#or
+nslookup -query=mx google.com
+
+```
+find all of the available DNS records of a domain:
+```
+nslookup -type=any <address>
+```
 
 **whois** - client for the whois directory service
 
@@ -117,6 +138,23 @@ sudo nmcli device wifi show-password
 
 when creating network manager confi file place it to: /etc/NetworkManager/conf.d
 
+
+
+## DNS
+
+set your DNS:
+
+/etc/resolv.conf
+```
+# IPv4 dns
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+# IPv6 dns
+nameserver 2606:4700:4700::1111
+```
+you can have max 3 entries
+
+to make it permanent also change the entries with nmcli like in above examples
 
 
 ## Older depricated method before CentOSsteam9/Rhel9...
