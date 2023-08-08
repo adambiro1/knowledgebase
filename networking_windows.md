@@ -59,6 +59,15 @@ address resolution protocol (ARP)   arp -a (list mac addresses)
 **Getmac** - This tool enables an administrator to display the MAC address for network adapters on a system.
  
 **Netstat** - Displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, IPv4 statistics (for the IP, ICMP, TCP, and UDP protocols), and IPv6 statistics (for the IPv6, ICMPv6, TCP over IPv6, and UDP over IPv6 protocols). Used without parameters, this command displays active TCP connections.
+```
+Netstat -n    do not resolve names only ip addresses
+
+Netstat -a    show also ports that are listening
+
+Netstat -b   shows on which program is using connection
+
+Netstat -f   shows fully qualified domain name
+```
 
 **Route** - Manipulates network routing tables
 
