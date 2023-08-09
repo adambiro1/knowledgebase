@@ -31,7 +31,7 @@ specify type:
 ```
 host -t ns google.com
 #or
-host -t mx gogle.com
+host -t mx google.com
 ```
 
 
