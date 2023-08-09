@@ -66,6 +66,27 @@ host -t mx google.com
 
 **tshark** - Dump and analyze network traffic *terminal based wireshark, install as wireshark-cli*
 
+show network devices:
+```
+sudo tshark -D
+```
+capture:
+```
+sudo tshark -i <interface>
+```
+ping ipaddress in process:
+```
+sudo tshark -i <interface> host <ipaddress>
+```
+save your output to a file:
+```
+sudo tshark -w /tmp/nlog.pcap -i <interface>
+```
+read that file
+```
+sudo tshark -r /tmp/nlog.pcap
+```
+
 **iperf3** - perform network throughput tests
 
 **ifstat** - handy utility to read network interface statistics
