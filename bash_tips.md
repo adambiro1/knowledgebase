@@ -21,3 +21,17 @@ Check CPU load average:
 ```
 cat /proc/loadavg
 ```
+
+Check opened prots:
+```
+ss -tulpn
+
+#or
+
+netstat -tulpn
+#find exact port
+netstat -tulpn | grep <port number>
+
+
+
+```
