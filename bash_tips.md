@@ -24,6 +24,10 @@ cat /proc/loadavg
 
 Check opened prots:
 ```
+ss -tulnp --no-header | awk '{print($1, $5, $7)}'
+```
+
+```
 ss -tulpn
 
 #or
