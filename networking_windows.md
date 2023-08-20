@@ -92,10 +92,126 @@ nslookup -type=any <address>
 
 **Netsh** - command-line scripting utility that allows you to, either locally or remotely, display or modify the network configuration of a currently running computer
 
+open netsh shell:
+```
+netsh
+```
+show interfaces:
+```
+netsh interface show interface
+```
+Configure Specific Network Interface:
+```
+netsh interface ipv4 set address "<interface name>" static <IP address> <subnet mask> <default gateway>
+```
+
+show wifi profiles:
+```
+netsh wlan show profiles
+```
+
+show wifi password:
+```
+netsh wlan show profile name="<profile name>" key=clear
+```
 
 ## Powershell:
 
- 
+list ip configuration:
+```
+Get-NetIPConfiguration
+```
+
+list all Network Adapters:
+```
+Get-NetAdapter
+```
+
+get a spesific network adapter by name:
+```
+Get-NetAdapter -Name *Ethernet*
+```
+
+get more information VLAN ID, Speed, Connection status:
+```
+Get-NetAdapter | ft Name, Status, Linkspeed, VlanID
+```
+
+get driver information:
+```
+Get-NetAdapter | ft Name, DriverName, DriverVersion, DriverInformation, DriverFileName
+```
+
+get adapter hardware information:
+```
+Get-NetAdapterHardwareInfo
+```
+
+disable and Enable a Network Adapter:
+```
+Disable-NetAdapter -Name "<name>"
+Enable-NetAdapter -Name "name"
+```
+
+get IP and DNS address information:
+```
+Get-NetAdapter -Name "Local Area Connection" | Get-NetIPAddress
+```
+
+more detailed ping:
+```
+Test-NetConnection www.google.com -InformationLevel Detailed
+```
+
+also specify hops:
+```
+Test-NetConnection -ComputerName www.google.com -Hops 5
+```
+
+tracert with PowerShell:
+```
+Test-NetConnection www.google.com –TraceRoute
+```
+
+check opend ports:
+```
+Test-NetConnection -ComputerName www.google.com -Port 80
+#or
+Test-NetConnection -ComputerName www.google.com -CommonTCPPort HTTP
+```
+
+check dns *nslookup in cmd*:
+```
+Resolve-DnsName www.google.com
+```
+
+check specific record:
+```
+Resolve-DnsName www.google.com -Type MX
+```
+
+route:
+```
+Get-NetRoute
+```
+
+route for interface alias:
+```
+Get-NetRoute -InterfaceAlias Wi-Fi
+```
+
+netstat:
+```
+Get-NetTCPConnection
+```
+
+have more specified state:
+```
+Get-NetTCPConnection –State Established
+```
+
+
+
 
 **DnsClient**
 
