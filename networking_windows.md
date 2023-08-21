@@ -96,13 +96,59 @@ open netsh shell:
 ```
 netsh
 ```
+
+show defined aliases:
+```
+netsh show alias
+```
+
+show multicast joins:
+```
+netsh interface ip show joins
+```
+
+reset winsock:
+```
+netsh winsock reset catalog
+```
+
+reset tcp/ip stack:
+```
+netsh int ip reset reset.log
+```
+
+#### interfaces:
+
 show interfaces:
 ```
 netsh interface show interface
 ```
+
+show index numbers of all interfaces:
+```
+netsh interface ip show interfaces
+```
+
 Configure Specific Network Interface:
 ```
 netsh interface ipv4 set address "<interface name>" static <IP address> <subnet mask> <default gateway>
+```
+
+change ip address for n interface:
+```
+netsh int ip set address "<interface name>" static 192.168.29.101 255.255.255.0 192.168.29.254 1
+```
+
+add a primaty DNS server:
+```
+netsh interface ip add dns name="Connection" addr=<address>
+```
+
+#### wireless:
+
+show all wirelesss interfaces:
+```
+netsh wlan show interfaces
 ```
 
 show wifi profiles:
@@ -114,6 +160,120 @@ show wifi password:
 ```
 netsh wlan show profile name="<profile name>" key=clear
 ```
+
+check all available wireless networks:
+```
+netsh wlan show networks
+```
+
+check strength of all wifi networks:
+```
+netsh wlan show networks mode=bssid
+```
+
+disconnect form connected wireless device:
+```
+netsh wlan disconnect
+```
+
+connect to available wireless device:
+```
+netsh wlan connect name="<name>"
+```
+
+show drivers of wireless interfaces:
+```
+netsh wlan show drivers
+```
+
+#### check global parameters:
+tcp:
+```
+netsh interface tcp show global
+```
+
+udp:
+```
+netsh interface udp show global
+```
+
+disable global parameters for tcp:
+```
+netsh interface tcp set global rss=disabled
+```
+
+enable global parameters for tcp:
+```
+netsh interface tcp set global rss=enabled
+```
+
+
+#### firewall managemet:
+
+check all firewall rules:
+```
+netsh advfirewall firewall show rule name=all
+```
+
+show firewall rules for current profile:
+```
+netsh advfirewall show currentprofile
+```
+
+allow port to windows firewall:
+```
+netsh advfirewall firewall add rule name="Open Remote Desktop" protocol=TCP dir=in localport=3389 action=allow
+```
+
+allow ping requests from windows firewall:
+```
+netsh advfirewall firewall add rule name="All ICMP V4" dir=in action=allow protocol=icmpv4
+```
+
+block ping requests from windows firewall:
+```
+netsh advfirewall firewall add rule name="All ICMP V4" dir=in action=block protocol=icmpv4
+```
+
+disable windows firewall in all profiles:
+```
+netsh advfirewall set allprofiles state off
+```
+
+reset windows firewall settings to default:
+```
+netsh advfirewall reset
+```
+
+#### proxy settings:
+
+check current proxy settings:
+```
+netsh winhttp show proxy
+```
+
+set proxy:
+```
+netsh winhttp set proxy "myproxy.proxyaddress.com:8484" "<local>;*.proxyaddress.com"
+```
+
+#### Packet Capture:
+
+start packet capture:
+```
+netsh trace start capture=yes tracefile=c:\trace.etl persistent=yes maxsize=4096
+```
+
+stop packet capture:
+```
+netsh trace stop
+```
+
+[packet catupre](https://learn.microsoft.com/en-us/windows/win32/ndf/using-netsh-to-manage-traces)
+
+[use WPA to analyze ETL files](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/opening-and-analyzing-etl-files-in-wpa)
+
+
 
 ## Powershell:
 
