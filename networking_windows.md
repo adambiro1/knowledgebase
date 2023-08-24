@@ -277,12 +277,49 @@ netsh trace stop
 
 ## Powershell:
 
+*Sometimes for better view use | format-list*
+
+*User object for better statistics(click tab for properties)*
+
+Test-netconnection:
+
+(ping)
+
+
+also specify hops:
+```
+Test-NetConnection -ComputerName www.google.com -Hops 5
+```
+
+```
+$test = Test-NetConnection google.com -InformationLevel "Detailed"
+
+$test.PingReplyDetails
+
+$test.PingReplyDetails.Buffer.Length
+```
+
 list ip configuration:
 ```
 Get-NetIPConfiguration
 ```
 
 list all Network Adapters:
+```
+$netadapters = Get-NetAdapter
+
+$netadapters.MacAddress
+```
+ 
+Ipconfig:
+ 
+```
+$ipinfo = Get-NetIPConfiguration
+
+$ipinfo[0].IPv4Address
+```
+
+
 ```
 Get-NetAdapter
 ```
@@ -318,31 +355,51 @@ get IP and DNS address information:
 Get-NetAdapter -Name "Local Area Connection" | Get-NetIPAddress
 ```
 
-more detailed ping:
-```
-Test-NetConnection www.google.com -InformationLevel Detailed
-```
-
-also specify hops:
-```
-Test-NetConnection -ComputerName www.google.com -Hops 5
-```
-
 tracert with PowerShell:
+
+
+```
+$test = Test-NetConnection google.com -TraceRoute
+
+$test.RemoteAddress
+
+$test.TraceRoute , $test.TraceRoute[1]
+```
+
+
 ```
 Test-NetConnection www.google.com –TraceRoute
 ```
 
-check opend ports:
+check opened ports:
+
+(port scanning)
+
 ```
-Test-NetConnection -ComputerName www.google.com -Port 80
-#or
-Test-NetConnection -ComputerName www.google.com -CommonTCPPort HTTP
+Test-NetConnection google.com -Port 80
+```
+ 
+
+Oneliner:
+ 
+```
+$ports = 22,80
+
+$address = "google.com"
+ 
+$ports | ForEach-Object { $port = $PSItem; if(Test-NetConnection $address -Port $port -InformationLevel Quiet -WarningAction SilentlyContinue) {Write-Host "Port $port is open" } else { Write-Host "Port $port is closed" } }
 ```
 
 check dns *nslookup in cmd*:
+
+Resolve-DnsName google.com
+
 ```
-Resolve-DnsName www.google.com
+$dnsserv = Get-DnsClientServerAddress -InterfaceAlias "Ethernet 5"
+
+$dnsserv[0].ServerAddresses
+
+Clear-DnsClientCache
 ```
 
 check specific record:
