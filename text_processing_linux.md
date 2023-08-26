@@ -140,3 +140,16 @@ print home directory:
 printf "Your home folder is %s.\n" $HOME
 ```
 
+## Find
+
+-search for files in a directory hierarchy
+
+basic usage:
+```
+find / -name "Foo.txt"
+```
+
+find directories:
+```
+find ~/ -type d
+```
