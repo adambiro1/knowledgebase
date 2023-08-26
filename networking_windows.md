@@ -1,47 +1,5 @@
 # Networking on Windows
-## CMD tips:
 
-``` 
-wmic useraccount where name="UID" get SID
-
-wmic product where "name like'%%office%%'" get name,version
-``````
- 
-
-List logged in users: 
-```
-query session
-```
-
- 
-
-```
-C:\Users\user>query session
-
-SESSIONNAME       USERNAME                 ID  STATE   TYPE        DEVICE
-
-services                                    0  Disc
-
->console           user                  1  Active
-
-
-…    logoff 1  (number is query )
-```
-
-Change cmd prompt look:
- 
-```
-C:\Users\user>prompt $D$S$T$_$V$_$P$_$G
-
-Fri 08/04/2023  8:05:02.82
-Microsoft Windows [Version 10.0.19044.3208]
-
-C:\Users\user
->prompt
-
- C:\Users\user>
-
-```
 ## Windows networking commands:
 
 **Ping**
