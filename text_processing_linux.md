@@ -116,3 +116,27 @@ Change also end of the output:
 awk 'BEGIN { sum=0 } /pattern/ { sum+=$6 } END { printf("<message>: %.0f MB\n", sum/1024) }' <filename>
 ```
 
+## printf
+
+-display the given string, number or any other format specifier on the terminal window
+
+print strings:
+```
+printf "%s\n" "Hello, World!"
+```
+
+print numbers:
+```
+printf "%d\n" "213" "109"
+```
+
+print logged in user:
+```
+printf "Hi, I'm %s.\n" $LOGNAME
+```
+
+print home directory:
+```
+printf "Your home folder is %s.\n" $HOME
+```
+
