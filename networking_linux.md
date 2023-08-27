@@ -1,4 +1,4 @@
-# Networking
+# Networking on Linux
 
 ## man pages to look
 ```
@@ -15,8 +15,9 @@ man nmsettings
 
 **ss** - another utility to investigate sockets *replacement for netstat*
 
-**netstat**  -  Print  network connections, routing tables, interface statistics, masquerade connections, and multicast
-       memberships
+
+**netstat**  -  Print  network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+
 
 **ethtool** - query or control network driver and hardware settings
 
@@ -46,6 +47,37 @@ host -t mx google.com
 **traceroute** - print the route packets trace to network host
 
 **nmap** - Network exploration tool and security / port scanner
+
+```
+nmap <ip address>
+```
+scan whole range of networks with wildcards:
+```
+nmap -sn 127.0.0.*
+```
+
+scan just certain range:
+```
+nmap -sn 127.0.0.1-5
+```
+do a fast scan:
+```
+nmap -F 127.0.0.1-5
+```
+put an output in to a file:
+```
+nmap -oG outputfile -F 127.0.0.1-5
+```
+more options:
+```
+nmap scanme.nmap.org -p21 --packet-trace
+```
+
+Treat target as it is online:
+```
+nmap <address> -Pn
+```
+
 
 **socat** - Multipurpose relay "(SOcket CAT)"
 
@@ -118,11 +150,6 @@ dig google.com mx
 
 [github](https://github.com/nmstate/nmstate)
 
-**NetworkManager** - network management daemon
-
-[networkmanager](https://networkmanager.dev/)
-
-[manual](https://developer-old.gnome.org/NetworkManager/stable/nmcli.html)
 
 **mtr** - a network diagnostic tool
 
@@ -130,17 +157,13 @@ dig google.com mx
 
 [mtr page](https://www.bitwizard.nl/mtr/)
 
-## Firewalld
+**NetworkManager** - network management daemon
 
-administration via:
-```
-firewall-cmd 
-```
-[firewalld docs](https://firewalld.org/documentation/)
+[networkmanager](https://networkmanager.dev/)
 
+[manual](https://developer-old.gnome.org/NetworkManager/stable/nmcli.html)
 
-
-## Tips network manager
+### Tips network manager
 
 show connection details with network manager:
 ```
@@ -170,7 +193,7 @@ when creating network manager confi file place it to: /etc/NetworkManager/conf.d
 
 
 
-## DNS
+#### DNS
 
 set your DNS:
 
@@ -218,5 +241,86 @@ format and stores them in /etc/NetworkManager/system-connections/
 Keys files in CentOSStream9 with your setting is:
 
 *System\ eth0.nmconnection*
+
+
+## Firewalld
+
+administration via:
+```
+firewall-cmd 
+```
+[firewalld docs](https://firewalld.org/documentation/)
+
+
+### services:
+
+list all allowed services:
+```
+firewall-cmd --list-services 
+```
+
+get info about the service:
+```
+firewall-cmd --info-service=ssh
+```
+
+add service:
+```
+firewall-cmd --add-service=http
+```
+remove service:
+```
+firewall-cmd --remove-service=http
+```
+
+to make changes persistent add: *--permanent*:
+```
+firewall-cmd --add-service=http --permanent
+```
+
+### zones:
+
+list all zones:
+```
+firewall-cmd --get-zones
+```
+
+list active zones:
+```
+firewall-cmd --get-active-zones 
+```
+
+get default zone:
+```
+firewall-cmd --get-default-zone
+```
+
+get information about a zone:
+```
+firewall-cmd --info-zone=internal
+```
+
+add port to default zone:
+```
+firewall-cmd --add-port=2022/tcp
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
