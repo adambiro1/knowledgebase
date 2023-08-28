@@ -16,3 +16,8 @@ usermod -aG sudo <username>
 ```
 
 logs for sudo are in: /var/log/secure
+
+## FreeBSD
+```
+pw groupmod wheel -m <username>
+```
