@@ -77,6 +77,8 @@ Treat target as it is online:
 ```
 nmap <address> -Pn
 ```
+**hping3** - send (almost) arbitrary TCP/IP packets to network hosts
+
 
 
 **socat** - Multipurpose relay "(SOcket CAT)"
