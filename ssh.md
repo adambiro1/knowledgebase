@@ -67,6 +67,11 @@ links:
 
 ## Managing sshd_config file
 
+on freebsd:
+```
+vi /etc/ssh/sshd_config
+```
+
 `man sshd_config`
 
 Match (user,group,address) statement makes a specific rules for chossen subject/s
