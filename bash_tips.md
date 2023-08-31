@@ -28,14 +28,22 @@ ss -tulnp --no-header | awk '{print($1, $5, $7)}'
 ```
 
 ```
-ss -tulpn
-
-#or
-
+ss -tulnp
+```
+```
+ss -tulpn | grep 22
+```
+with netsat:
+```
 netstat -tulpn
-#find exact port
-netstat -tulpn | grep <port number>
+```
 
+change random password for a user and also put it in a file:
+```
+mkpasswd | tee <file> | passwd --stdin rhel
+```
 
-
+have a resverse history seach *CTRL r*:
+```
+(reverse-i-search)`gr': dnf grouplist
 ```
