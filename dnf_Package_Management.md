@@ -23,6 +23,10 @@ use module to install exact version of the package:
 ```
 sudo module install nginx:1.22
 ```
+find all files asociated with package:
+```
+dnf repoquery -l ngingx
+```
 
 #### dnf groups
 
