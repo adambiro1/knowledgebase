@@ -47,3 +47,9 @@ have a resverse history seach *CTRL r*:
 ```
 (reverse-i-search)`gr': dnf grouplist
 ```
+
+
+list all available commands:
+```
+compgen -c
+```
