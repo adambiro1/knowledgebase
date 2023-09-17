@@ -116,6 +116,23 @@ Change also end of the output:
 awk 'BEGIN { sum=0 } /pattern/ { sum+=$6 } END { printf("<message>: %.0f MB\n", sum/1024) }' <filename>
 ```
 
+print number of fields with NF:
+```
+awk '{ print NF, $1 }' <file>
+```
+
+delete empty lines in file:
+```
+awk 'NF > 0 { print }' <file>
+```
+
+print line numbers with NR variable:
+```
+awk '{ print NR, $0 }' <file>
+```
+
+
+
 ## printf
 
 -display the given string, number or any other format specifier on the terminal window
