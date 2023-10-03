@@ -131,6 +131,19 @@ print line numbers with NR variable:
 awk '{ print NR, $0 }' <file>
 ```
 
+create a csv file txt2csv.awk:
+```
+BEGIN {
+  IFS="\t"
+  OFS=","
+}
+{ print $1, $2, $3, $4, $5 }
+```
+
+run it:
+```
+awk -f txt2csv.awk file.dat > file.csv
+```
 
 
 ## printf
