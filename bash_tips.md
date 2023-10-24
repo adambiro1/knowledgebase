@@ -53,3 +53,15 @@ list all available commands:
 ```
 compgen -c
 ```
+
+Keeping Files Safe from Accidental Overwriting(only works when redirecting output):
+
+turn it on:
+```
+set -onoclobber
+```
+turn it off:
+```
+set +o noclobber
+```
+
