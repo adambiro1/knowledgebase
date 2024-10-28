@@ -4,7 +4,7 @@
 generate ssh key:
 
 ```
-ssh-keygen -t ed25519 -f ${HOME}/.ssh/name it 
+a="${HOME}/.ssh/id_ed25519_$(hostname)_$(date +"%Y-%m-%d")"; ssh-keygen -t ed25519 -f $a -C $a
 ```
 
 
@@ -55,13 +55,6 @@ run this command to reload config file
 sudo systemctl reload sshd 
 ```
 
-links:
-
-[disable pswd authentication](https://serverpilot.io/docs/how-to-disable-ssh-password-authentication/)
-
-[add sshpub key to server](https://www.simplified.guide/ssh/copy-public-key)
-
-[sshconfig file client](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
 
 ---
 
@@ -117,4 +110,29 @@ ps ax | grep sshd
 tunel mssql 
 ```
 ssh user@servername -L 0.0.0.0:3306:127.0.0.1:3306
+```
+
+### sftp
+connect to server:
+
+```
+sftp server name
+```
+
+get file from remote system:
+
+```
+get <file>
+```
+
+upload whole dir to the new location:
+
+```
+put -r dir/iso/
+```
+
+quit sftp:
+
+```
+bye
 ```
