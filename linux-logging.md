@@ -11,10 +11,9 @@ udevadm monitor
 
 ## Journald
 
-<aside>
-💡 log files will only be created in the /run/log/journal/ directory and will disappear every time you shut down or reboot the machine. To have it store permanently create /var/log/journal directory.
 
-</aside>
+>log files will only be created in the /run/log/journal/ directory and will disappear every time you shut down or reboot the machine. To have it store permanently create /var/log/journal directory.
+
 
 cofig files `/etc/systemd/journald.conf`
 
