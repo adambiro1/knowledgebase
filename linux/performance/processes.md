@@ -109,3 +109,16 @@ tuna --show_threads
 **tapestat** - Report tape statistics
 
 **cifsiostat** - Report CIFS statistics
+
+## BCC tools
+
+install on rhel:
+
+```
+sudo dnf -y install bcc-tools
+```
+
+run them:
+```
+/usr/share/bcc/tools/
+```
