@@ -11,7 +11,6 @@ udevadm monitor
 
 ## Journald
 
-
 >log files will only be created in the /run/log/journal/ directory and will disappear every time you shut down or reboot the machine. To have it store permanently create /var/log/journal directory.
 
 
@@ -32,6 +31,14 @@ echo "This is a message to journald" | systemd-cat
 ```
 
 ### journalctl
+
+**Find failures with journalctl:**
+
+```
+journalctl --no-pager --since today \
+--grep 'fail|error|fatal' --output json|jq '._EXE' | \
+sort | uniq -c | sort --numeric --reverse --key 1
+```
 
 to view full logging on RHEL add user to systemd-journal group(or adm but it seems systemd-journal is better):
 
