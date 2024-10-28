@@ -1,0 +1,1 @@
+# Stuff to ocp mainly oc commands
