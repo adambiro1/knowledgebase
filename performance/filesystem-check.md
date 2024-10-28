@@ -2,7 +2,7 @@
 
 **df** - report file system space usage
 
-```bash
+```
 df -h
 ```
 
@@ -10,29 +10,29 @@ df -h
 
 **strace** - trace system calls and signals
 
-```bash
+```
 strace cksum -tttT /usr/bin/cksum
 ```
 
 **perf** - Performance analysis tools for Linux
 
-```bash
+```
 perf trace cksum /usr/bin/cksum
 ```
 
-```bash
+```
 perf stat -e 'ext4:*' -a
 ```
 
 **fatrace** - report system wide file access events
 
-```bash
+```
 fatrace -f O
 ```
 
 **pidstat** - Report statistics for Linux tasks
 
-```bash
+```
 pidstat 10
 ```
 

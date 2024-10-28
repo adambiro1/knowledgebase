@@ -2,25 +2,25 @@
 
 **iostat** - Report Central Processing Unit (CPU) statistics and input/output statistics for devices and partitions
 
-```bash
+```
 iostat -dxz 1
 ```
 
 **blktrace** - generate traces of the i/o traffic on block devices
 
-```bash
+```
 btrace /dev/nvme2n1
 ```
 
 enable SCSI event logging:
 
-```bash
+```
 sysctl -w dev.scsi.logging_level=0x1b6db6db
 ```
 
 or
 
-```bash
+```
 echo 0x1b6db6db > /proc/sys/dev/scsi/logging_level
 ```
 

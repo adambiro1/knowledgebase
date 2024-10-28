@@ -6,21 +6,29 @@
 
 **ps** - Process statistics, including memory usage
 
+View the top 10 most-RAM-consuming processes:
+```
+ps -L aux | sort -nr -k 4 | head -10
+```
+
 **pmap** - Process memory usage by segment
 
-```bash
+```
 pmap -x 3785
 ```
 
 **vmstat** - Various statistics, including memory
 
-```bash
+```
 vmstat 1
+```
+```
+vmstat -S m 1 3
 ```
 
 **sar** - Can show page fault and page scanner rates
 
-```bash
+```
 sar -B 1
 ```
 
@@ -28,7 +36,7 @@ sar -B 1
 
 **perf** - Memory-related PMC statistics and event sampling
 
-```bash
+```
 perf stat -e LLC-loads,LLC-load-misses -a -I 1000
 ```
 
@@ -38,7 +46,7 @@ perf stat -e LLC-loads,LLC-load-misses -a -I 1000
 
 **memleak** - Shows possible memory leak code paths
 
-```bash
+```
 memleak -p 3126
 ```
 
@@ -56,7 +64,7 @@ memleak -p 3126
 
 **drsnoop** - Traces direct reclaim events, showing latency
 
-```bash
+```
 drsnoop -T
 ```
 
