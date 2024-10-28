@@ -83,10 +83,6 @@ sudo virsh net-list
 sudo virsh net-info default
 ```
 
-
-**Making VM accessible to other devices**
-
-
 ### create bridge for machines
 
 
