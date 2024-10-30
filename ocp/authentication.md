@@ -57,9 +57,11 @@ oc whoami --show-context
 ```
 
 
-**oc get|describe|edit|delete**
+
 
 ### authentication general
+
+**oc get|describe|edit|delete**
 
 ```
 authentications.config.openshift.io
@@ -67,6 +69,8 @@ authentications.operator.openshift.io
 ```
 
 ### internal OAuth server
+
+**oc get|describe|edit|delete**
 
 ```
 oauths.config.openshift.io
@@ -78,6 +82,8 @@ useroauthaccesstokens.oauth.openshift.io
 ```
 
 ### users, groups, identities and useridentitymappings:
+
+**oc get|describe|edit|delete**
 
 ```
 identities.user.openshift.io
